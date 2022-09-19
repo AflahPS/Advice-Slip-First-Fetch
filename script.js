@@ -41,11 +41,11 @@ const quoteCloseButton = document.querySelector(".close-quote-modale");
 const quoteAuthorScreen = document.querySelector("#quote-author");
 
 const getQuote = async function () {
-  const data1 = await fetch("https://api.goprogram.ai/inspiration");
+  const data1 = await fetch("https://api.quotable.io/random");
   const data2 = await data1.json();
   console.log(data2);
-  const { quote, author } = data2;
-  displayQuote.textContent = `"${quote}"`;
+  const {content,author} = data2;
+  displayQuote.textContent = `"${content}"`;
   quoteAuthorScreen.textContent = `-${author}`;
 };
 
