@@ -1,26 +1,52 @@
-.cont{
+.cont {
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-color: aliceblue;
-}
+  justify-content: center;
+  gap: 2rem;
+  background-image: url(images/bg-img.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 4rem;
 
-.main{
-  background-color: rgb(203, 211, 195);
-  max-height: 75vh;
+}
+.modale{
+  background-color: rgb(203, 211, 195);max-height: 75vh;
   min-height: 50vh;
   max-width: 75vw;
-  min-width: 50vw;
-  border-radius:34px;
+  min-width: 50vw;border-radius: 34px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 3px 3px rgba(139, 139, 139, 0.699);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: all 0.5s;
 }
 
-.advice-text{
+.modale-text {
   color: rgb(21, 102, 1);
   text-align: center;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}

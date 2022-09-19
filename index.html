@@ -18,16 +18,34 @@
   </head>
   <body>
     <div class="container-fluid cont">
-      <div class="container main">
-        <div class="advice-text">
-          <h1 class="slip">Click to get an ADVICE</h1>
+
+      <button class="btn btn-lg btn-danger advice-button">ADVICE</button>
+      <button class="btn btn-lg btn-danger quote-button">QUOTE</button>
+
+      <div class="overlay hidden"></div>
+      <!-- Advice -->
+      <div class="container modale hidden" id="advice-modale">
+        <div class="modale-text">
+          <h1 id="advice-screen">Click to get an ADVICE</h1>
         </div>
-        <div class="button text-center">
-          <button class="btn btn-primary">GET NEW ADVICE</button>
+        <div class="text-center">
+          <button class="btn btn-primary get-advice">GET NEW ADVICE</button>
+          <button class="btn btn-primary close-advise-modale">CLOSE</button>
+        </div>
+      </div>
+      <!-- Quote -->
+      <div class="container modale hidden" id="quote-modale">
+        <div class="modale-text">
+          <h1 id="quote-screen">Click to get a QUOTE</h1>
+          <h6 id="quote-author"></h6>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary get-quote">GET NEW QUOTE</button>
+          <button class="btn btn-primary close-quote-modale">CLOSE</button>
         </div>
       </div>
     </div>
-    
+
     <script src="script.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script
